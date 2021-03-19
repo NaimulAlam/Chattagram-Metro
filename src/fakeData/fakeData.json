@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/cc0000/ffffff",
+    "location": "Dwight",
+    "price": 49
+  },
+  {
+    "id": 2,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Maryland",
+    "price": 49
+  },
+  {
+    "id": 3,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Sutherland",
+    "price": 49
+  },
+  {
+    "id": 4,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Hauk",
+    "price": 49
+  },
+  {
+    "id": 5,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Weeping Birch",
+    "price": 49
+  },
+  {
+    "id": 6,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location": "Morrow",
+    "price": 49
+  },
+  {
+    "id": 7,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location": "Comanche",
+    "price": 69
+  },
+  {
+    "id": 8,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location": "Hallows",
+    "price": 69
+  },
+  {
+    "id": 9,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location": "5th",
+    "price": 69
+  },
+  {
+    "id": 10,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location": "Truax",
+    "price": 99
+  },
+  {
+    "id": 11,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Nova",
+    "price": 99
+  },
+  {
+    "id": 12,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location": "Merchant",
+    "price": 99
+  },
+  {
+    "id": 13,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location": "Eliot",
+    "price": 149
+  },
+  {
+    "id": 14,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/cc0000/ffffff",
+    "location": "Lakewood",
+    "price": 149
+  },
+  {
+    "id": 15,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location": "Mallard",
+    "price": 149
+  }
+]
