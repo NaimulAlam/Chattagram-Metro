@@ -102,17 +102,7 @@ function Login() {
         className="justify-content-md-center xs={2} md={4} lg={6}"
         bg="light"
       >
-        <Col className="login-form" md="auto">
-          <Col>
-            <p style={{ color: "red" }}>{loggedInUser.error} </p>
-            {loggedInUser.success && (
-              <p style={{ color: "white" }}>
-                {" "}
-                User {newUser ? "Created" : "Logged In"} Successfully.
-              </p>
-            )}
-          </Col>
-          <Col>
+        <Col className="login-form" lg={12}>
             <Form className="locationCard m-2 p-3" onSubmit={handleSubmit}>
               <input
                 type="checkbox"
@@ -157,24 +147,35 @@ function Login() {
               <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
             </Form>
           </Col>
-        </Col>
+          <Col>
+            <p style={{ color: "red" }}>{loggedInUser.error} </p>
+            {loggedInUser.success && (
+              <p style={{ color: "white" }}>
+                {" "}
+                User {newUser ? "Created" : "Logged In"} Successfully.
+              </p>
+            )}
+          </Col>
       </Row>
-      <Row>
-        <Col className="mb-5">
+      <p><hr class="solid"></hr></p>
+      <Row >
+        <Col lg={12} >
           {
             loggedInUser.isSignedIn ? (
-              <Button className="mx-2 py-3" variant="Warning" onClick={signOut}>
+              <Button className="m-2 my-2 py-3" variant="Warning" onClick={signOut}>
                 <FontAwesomeIcon icon={faGoogle} />
                 Google Sign out
               </Button>
             ) : (
               <Button
-                className="mx-2 py-3" variant="primary" onClick={googleSignIn}
+                className="m-2 py-3" variant="primary" onClick={googleSignIn}
               >
                 <FontAwesomeIcon icon={faGoogle} /> Google Sign in
               </Button>
             )
           }
+          </Col>
+          <Col lg={12} >
           {loggedInUser.isSignedIn ?<Button className="mx-2 py-3" variant="primary" onClick={signOut}>
             <FontAwesomeIcon icon={faFacebookSquare} /> Facebook Sign out
           </Button>

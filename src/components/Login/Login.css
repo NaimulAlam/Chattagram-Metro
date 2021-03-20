@@ -1,6 +1,15 @@
 .login-form{
-    margin:20px 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 40px,
 }
+hr.solid{
+    border-top: 4px solid rgb(0, 168, 98);
+    border-radius: 5px;
+  }
 .login-form input {
     display: block;
     margin-top: 10px;
@@ -14,9 +23,11 @@
 }
 @media screen and (max-width: 600px) {
     .login-form {
-        margin:20px 30px;
+        margin:0px 0px 10px 0px;
+        padding: 0px;
     }
     .login-form input {
-        width: 250px;
+        width: 210px;
+        padding: 5px;
     }
   }

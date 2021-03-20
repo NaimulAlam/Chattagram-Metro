@@ -1,7 +1,6 @@
-.cardsStyle{
-  text-align: center;
-}
-.CardImg {
-  width: 250px;
+.cardsStyle {
+  display: flex;
+  width: 280px;
   height: 300px;
 }
+
