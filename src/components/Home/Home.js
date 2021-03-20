@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CardDeck, Container } from "react-bootstrap";
+import {Col, Container, Row } from "react-bootstrap";
 import fakeData from "../../fakeData/fakeData.json";
 import Tickets from "../Tickets/Tickets";
 
@@ -8,16 +8,17 @@ const Home = () => {
 
   useEffect(() => {
     setTickets(fakeData);
-    console.log(fakeData);
   }, []);
 
   return (
     <Container className="mt-5">
-      <CardDeck>
+      <Row>
         {tickets.map((ticket) => (
-          <Tickets ticket={ticket}></Tickets>
+          <Col className="mt-3" xs={12} md={6} lg={3}>
+            <Tickets ticket={ticket}></Tickets>
+          </Col>
         ))}
-      </CardDeck>
+      </Row>
     </Container>
   );
 };

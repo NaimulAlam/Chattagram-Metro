@@ -10,7 +10,7 @@ const Tickets = (ticket) => {
     history.push(`/destination/${ticketType}`);
   };
   return (
-    <Card className="text-white cardsStyle">
+    <Card bg='info' className="text-white mb-3 cardsStyle">
       <Card.Img className="CardImg" src={imgUrl} alt="Card image" fluid />
       <Card.ImgOverlay>
         <Card.Body>

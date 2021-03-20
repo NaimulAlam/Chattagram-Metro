@@ -7,6 +7,7 @@ import {
   createUserWithEmailAndPassword,
   handleFbSignIn,
   handleGoogleSignIn,
+  handleSignOut,
   initializeLogin,
   signInWithEmailAndPassword,
 } from "./LogingManager.js";
@@ -28,10 +29,19 @@ function Login() {
 
   initializeLogin();
 
-  const [ setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
   const history = useHistory();
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
+
+    const handleResponse = (res, redirect) => {
+    setUser(res);
+    setLoggedInUser(res);
+    if (redirect) {
+      history.replace(from);
+    }
+  };
 
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
@@ -39,13 +49,13 @@ function Login() {
     });
   };
 
-  const handleResponse = (res, redirect) => {
-    setUser(res);
-    setLoggedInUser(res);
-    if (redirect) {
-      history.replace(from);
-    }
+  const signOut = () => {
+    handleSignOut().then((res) => {
+      handleResponse(res, false);
+    });
   };
+
+
 
   const fbSignIn = () => {
     handleFbSignIn().then((res) => {
@@ -64,7 +74,6 @@ function Login() {
     if (!newUser && user.email && user.password) {
       signInWithEmailAndPassword(user.email, user.password).then((res) => {
         handleResponse(res, true);
-        console.log(res);
       });
     }
     e.preventDefault();
@@ -94,70 +103,85 @@ function Login() {
         bg="light"
       >
         <Col className="login-form" md="auto">
-          <Form className="locationCard m-2 p-3" onSubmit={handleSubmit}>
-            <input
-              type="checkbox"
-              onChange={() => setNewUser(!newUser)}
-              name="newUser"
-              id=""
-            />
-            <label htmlFor="newUser"> New User Sign Up</label>
-            {newUser && (
+          <Col>
+            <p style={{ color: "red" }}>{loggedInUser.error} </p>
+            {loggedInUser.success && (
+              <p style={{ color: "white" }}>
+                {" "}
+                User {newUser ? "Created" : "Logged In"} Successfully.
+              </p>
+            )}
+          </Col>
+          <Col>
+            <Form className="locationCard m-2 p-3" onSubmit={handleSubmit}>
+              <input
+                type="checkbox"
+                onChange={() => setNewUser(!newUser)}
+                name="newUser"
+                id=""
+              />
+              <label htmlFor="newUser"> New User Sign Up</label>
+              {newUser && (
+                <input
+                  type="text"
+                  onBlur={handleBlur}
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              )}
               <input
                 type="text"
                 onBlur={handleBlur}
-                name="name"
-                placeholder="Your name"
+                name="email"
+                placeholder="Your email address"
                 required
               />
-            )}
-            <input
-              type="text"
-              onBlur={handleBlur}
-              name="email"
-              placeholder="Your email address"
-              required
-            />
-            <input
-              type="password"
-              onBlur={handleBlur}
-              name="password"
-              id=""
-              placeholder="Password"
-              required
-            />
-            {newUser && (
               <input
                 type="password"
                 onBlur={handleBlur}
                 name="password"
-                placeholder="Retype Password"
+                id=""
+                placeholder="Password"
                 required
               />
-            )}
-            <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
-          </Form>
-          <p style={{ color: "red" }}>{user.error} </p>
-          {user.success && (
-            <p style={{ color: "green" }}>
-              {" "}
-              User {newUser ? "Created" : "Logged In"} Successfully.
-            </p>
-          )}
+              {newUser && (
+                <input
+                  type="password"
+                  onBlur={handleBlur}
+                  name="password"
+                  placeholder="Retype Password"
+                  required
+                />
+              )}
+              <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
+            </Form>
+          </Col>
         </Col>
       </Row>
       <Row>
         <Col className="mb-5">
-          <Button
-            className="mx-2 py-3"
-            variant="primary"
-            onClick={googleSignIn}
-          >
-            <FontAwesomeIcon icon={faGoogle} /> Google Sign in
+          {
+            loggedInUser.isSignedIn ? (
+              <Button className="mx-2 py-3" variant="Warning" onClick={signOut}>
+                <FontAwesomeIcon icon={faGoogle} />
+                Google Sign out
+              </Button>
+            ) : (
+              <Button
+                className="mx-2 py-3" variant="primary" onClick={googleSignIn}
+              >
+                <FontAwesomeIcon icon={faGoogle} /> Google Sign in
+              </Button>
+            )
+          }
+          {loggedInUser.isSignedIn ?<Button className="mx-2 py-3" variant="primary" onClick={signOut}>
+            <FontAwesomeIcon icon={faFacebookSquare} /> Facebook Sign out
           </Button>
-          <Button className="mx-2 py-3" variant="primary" onClick={fbSignIn}>
+          :<Button className="mx-2 py-3" variant="primary" onClick={fbSignIn}>
             <FontAwesomeIcon icon={faFacebookSquare} /> Facebook Sign in
           </Button>
+          }
         </Col>
       </Row>
     </Container>
