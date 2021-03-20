@@ -7,7 +7,6 @@ import {
   createUserWithEmailAndPassword,
   handleFbSignIn,
   handleGoogleSignIn,
-  handleSignOut,
   initializeLogin,
   signInWithEmailAndPassword,
 } from "./LogingManager.js";
@@ -29,7 +28,7 @@ function Login() {
 
   initializeLogin();
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [ setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -37,12 +36,6 @@ function Login() {
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
       handleResponse(res, true);
-    });
-  };
-
-  const signOut = () => {
-    handleSignOut().then((res) => {
-      handleResponse(res, false);
     });
   };
 
