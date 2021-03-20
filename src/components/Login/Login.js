@@ -144,13 +144,13 @@ function Login() {
             )}
             <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
           </Form>
-          {/* <p style={{ color: "red" }}>{user.error} </p>
+          <p style={{ color: "red" }}>{user.error} </p>
           {user.success && (
             <p style={{ color: "green" }}>
               {" "}
               User {newUser ? "Created" : "Logged In"} Successfully.
             </p>
-          )} */}
+          )}
         </Col>
       </Row>
       <Row>

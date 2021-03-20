@@ -29,7 +29,7 @@ const Header = () => {
           <Link className="" to="/home">
             Home
           </Link>
-          <Link to="/Destination">Destination</Link>
+          <Link to="/destination">Destination</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
           {/* <Link to="/login"><Button variant="danger">Login</Button></Link> */}

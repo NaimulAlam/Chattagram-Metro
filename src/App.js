@@ -40,7 +40,6 @@ function App() {
           <Route exact path="/destination/:ticketType">
             <TicketType />
           </Route>
-          
 
           <Route path="/login">
             <Login />
