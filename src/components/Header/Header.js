@@ -9,12 +9,20 @@ const Header = () => {
   const setLogOut = () => {
     setLoggedInUser({});
   };
+
+  const userNameStyle = {
+      color: "rgb(255, 255, 255)",
+      fontSize: "15px",
+      backgroundColor: "rgb(3, 151, 10)",
+      borderRadius: "20px",
+  }
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Link to="/home">
         <Navbar.Brand>Chattagram Metro Rail</Navbar.Brand>
       </Link>
-      <Navbar.Text>{loggedInUser.name}{loggedInUser.displayName} </Navbar.Text>
+      <Navbar className='userName'>{loggedInUser.name}{loggedInUser.displayName}</Navbar>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto LinkText">

@@ -9,3 +9,9 @@
 .LinkText a:hover{
     text-decoration: none;
 }
+.userName{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background-color: rgb(3, 151, 10);
+    border-radius: 20px;
+}

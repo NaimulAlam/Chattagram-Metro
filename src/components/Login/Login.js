@@ -1,3 +1,5 @@
+import { faFacebookSquare, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import { UserContext } from "../../App";
@@ -9,6 +11,9 @@ import {
   initializeLogin,
   signInWithEmailAndPassword,
 } from "./LogingManager.js";
+
+import "./Login.css";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 function Login() {
   const [newUser, setNewUser] = useState(false);
@@ -31,36 +36,35 @@ function Login() {
 
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
-        handleResponse(res, true);
+      handleResponse(res, true);
     });
   };
 
   const signOut = () => {
     handleSignOut().then((res) => {
-        handleResponse(res, false);
+      handleResponse(res, false);
     });
   };
 
-  const handleResponse =(res, redirect) =>{
+  const handleResponse = (res, redirect) => {
     setUser(res);
     setLoggedInUser(res);
-    if(redirect){
-        history.replace(from);
+    if (redirect) {
+      history.replace(from);
     }
-  }
+  };
 
   const fbSignIn = () => {
     handleFbSignIn().then((res) => {
-        handleResponse(res, true);
+      handleResponse(res, true);
     });
   };
 
   const handleSubmit = (e) => {
-    // console.log(user.email, user.password);
     if (newUser && user.email && user.password) {
       createUserWithEmailAndPassword(user.name, user.email, user.password).then(
         (res) => {
-            handleResponse(res, true);
+          handleResponse(res, true);
         }
       );
     }
@@ -74,11 +78,9 @@ function Login() {
   };
 
   const handleBlur = (e) => {
-    // console.log(e.target.name, e.target.value);
     let isFieldValid = true;
     if (e.target.name === "email") {
       isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-      // console.log('email: '+ isFieldValid);
     }
     if (e.target.name === "password") {
       const isPasswordValid = e.target.value.length > 6;
@@ -93,75 +95,79 @@ function Login() {
   };
 
   return (
-    <div className="App">
-      <h3>This is Fire-Auth11</h3>
-      {
-        //condition ? showAfter : showBefore
-        user.isSignedIn ? (
-          <button onClick={signOut}>Google Sign out</button>
-        ) : (
-          <button onClick={googleSignIn}> Google Sign in</button>
-        )
-      }
-      <br />
-      <button onClick={fbSignIn}>Sign in Using Facebook</button>
-
-      {user.isSignedIn && (
-        <div>
-          <p>Welcome, {user.name} </p>
-          <p>Your Email: {user.email} </p>
-          <img src={user.photo} alt="" />
-        </div>
-      )}
-
-      <h1>Our Own Authentication</h1>
-      {/* <p>Name: {user.name}</p>
-        <p>Email: {user.email} </p>
-        <p>Password: {user.password} </p> */}
-      <input
-        type="checkbox"
-        onChange={() => setNewUser(!newUser)}
-        name="newUser"
-        id=""
-      />
-      <label htmlFor="newUser"> New User Sign Up</label>
-      <form onSubmit={handleSubmit}>
-        {newUser && (
-          <input
-            type="text"
-            onBlur={handleBlur}
-            name="name"
-            placeholder="Your name"
-          />
-        )}
-        <br />
-        <input
-          type="text"
-          onBlur={handleBlur}
-          name="email"
-          placeholder="Your email address"
-          required
-        />
-        <br />
-        <input
-          type="password"
-          onBlur={handleBlur}
-          name="password"
-          id=""
-          placeholder="password"
-          required
-        />
-        <br />
-        <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
-      </form>
-      <p style={{ color: "red" }}>{user.error} </p>
-      {user.success && (
-        <p style={{ color: "green" }}>
-          {" "}
-          User {newUser ? "Created" : "Logged In"} Successfully.
-        </p>
-      )}
-    </div>
+    <Container className="App mt-5">
+      <Row
+        className="justify-content-md-center xs={2} md={4} lg={6}"
+        bg="light"
+      >
+        <Col className="login-form" md="auto">
+          <Form className="locationCard m-2 p-3" onSubmit={handleSubmit}>
+            <input
+              type="checkbox"
+              onChange={() => setNewUser(!newUser)}
+              name="newUser"
+              id=""
+            />
+            <label htmlFor="newUser"> New User Sign Up</label>
+            {newUser && (
+              <input
+                type="text"
+                onBlur={handleBlur}
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            )}
+            <input
+              type="text"
+              onBlur={handleBlur}
+              name="email"
+              placeholder="Your email address"
+              required
+            />
+            <input
+              type="password"
+              onBlur={handleBlur}
+              name="password"
+              id=""
+              placeholder="Password"
+              required
+            />
+            {newUser && (
+              <input
+                type="password"
+                onBlur={handleBlur}
+                name="password"
+                placeholder="Retype Password"
+                required
+              />
+            )}
+            <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
+          </Form>
+          {/* <p style={{ color: "red" }}>{user.error} </p>
+          {user.success && (
+            <p style={{ color: "green" }}>
+              {" "}
+              User {newUser ? "Created" : "Logged In"} Successfully.
+            </p>
+          )} */}
+        </Col>
+      </Row>
+      <Row>
+        <Col className="mb-5">
+          <Button
+            className="mx-2 py-3"
+            variant="primary"
+            onClick={googleSignIn}
+          >
+            <FontAwesomeIcon icon={faGoogle} /> Google Sign in
+          </Button>
+          <Button className="mx-2 py-3" variant="primary" onClick={fbSignIn}>
+            <FontAwesomeIcon icon={faFacebookSquare} /> Facebook Sign in
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

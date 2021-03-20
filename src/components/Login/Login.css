@@ -1,0 +1,22 @@
+.login-form{
+    margin:20px 50px;
+}
+.login-form input {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 350px;
+}
+.error{
+    color: red;
+}
+@media screen and (max-width: 600px) {
+    .login-form {
+        margin:20px 30px;
+    }
+    .login-form input {
+        width: 250px;
+    }
+  }

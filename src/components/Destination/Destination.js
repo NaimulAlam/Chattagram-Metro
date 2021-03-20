@@ -4,6 +4,8 @@ import "./Destination.css";
 import mapImg from "../../images/image 6.png";
 
 const Destination = (props) => {
+  
+
   return (
     <Container className="mt-5">
       <Row>
