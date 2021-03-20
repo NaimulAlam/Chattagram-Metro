@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/cc0000/ffffff",
+    "location1": "Terminal",
+    "location2": "Terminal2",
+    "price": 49
+  },
+  {
+    "id": 2,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal",
+    "location2": "Terminal2",
+    "price": 49
+  },
+  {
+    "id": 3,
+    "name": "zone1",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal",
+    "location2": "Terminal2",
+    "price": 49
+  },
+  {
+    "id": 4,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal2",
+    "location2": "Terminal3",
+    "price": 49
+  },
+  {
+    "id": 5,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal2",
+    "location2": "Terminal3",
+    "price": 49
+  },
+  {
+    "id": 6,
+    "name": "zone2",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location1": "Terminal2",
+    "location2": "Terminal3",
+    "price": 49
+  },
+  {
+    "id": 7,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 69
+  },
+  {
+    "id": 8,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 69
+  },
+  {
+    "id": 9,
+    "name": "zone1+2",
+    "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 69
+  },
+  {
+    "id": 10,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 99
+  },
+  {
+    "id": 11,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 99
+  },
+  {
+    "id": 12,
+    "name": "zone1+2F",
+    "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/5fa2dd/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 99
+  },
+  {
+    "id": 13,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+    "logo": "http://dummyimage.com/150x150.png/dddddd/000000",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 149
+  },
+  {
+    "id": 14,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/cc0000/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal-3",
+    "price": 149
+  },
+  {
+    "id": 15,
+    "name": "zone1+2Y",
+    "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+    "logo": "http://dummyimage.com/150x150.png/ff4444/ffffff",
+    "location1": "Terminal1-2",
+    "location2": "Terminal2-3",
+    "price": 149
+  }
+]

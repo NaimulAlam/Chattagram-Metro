@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { CardColumns, CardDeck, Col, Container, Row } from "react-bootstrap";
+import fakeData from "../../fakeData/fakeData.json";
+import Tickets from "../Tickets/Tickets";
 
 const Home = () => {
-    return (
-        <div>
-            <h1>This is Home</h1>
-        </div>
-    );
+  const [tickets, setTickets] = useState([]);
+
+  useEffect(() => {
+    setTickets(fakeData);
+    console.log(fakeData);
+  }, []);
+
+  return (
+    <Container className="mt-5">
+      <CardDeck>
+        {tickets.map((ticket) => (
+          <Tickets ticket={ticket}></Tickets>
+        ))}
+      </CardDeck>
+    </Container>
+  );
 };
 
 export default Home;
