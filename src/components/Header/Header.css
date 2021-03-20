@@ -1,0 +1,11 @@
+.LinkText{
+    padding-right: 40px;
+}
+.LinkText a{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.LinkText a:hover{
+    text-decoration: none;
+}

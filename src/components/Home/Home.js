@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CardColumns, CardDeck, Col, Container, Row } from "react-bootstrap";
+import { CardDeck, Container } from "react-bootstrap";
 import fakeData from "../../fakeData/fakeData.json";
 import Tickets from "../Tickets/Tickets";
 
