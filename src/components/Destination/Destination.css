@@ -2,7 +2,15 @@
     color: red;
 }
 .locationCard{
-    background-color: royalblue;
+    background-color: rgb(3, 27, 97);
+    color: white;
+}
+.locationShow{
+    background-color: rgb(8, 146, 54);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 3px 3px 15px 7px rgb(180, 180, 180);
 }
 
 .Map{

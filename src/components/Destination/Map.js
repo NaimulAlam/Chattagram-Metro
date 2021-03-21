@@ -1,7 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import "./Destination.css";
-import { Col, Container } from "react-bootstrap";
 
 const containerStyle = {
   position: "relative",
