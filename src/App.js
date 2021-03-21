@@ -9,7 +9,6 @@ import { createContext, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Blog from "./components/Blog/Blog";
 import Contact from "./components/Contact/Contact";
-import TicketType from "./components/TicketType/TicketType";
 
 export const UserContext = createContext();
 
@@ -37,9 +36,9 @@ function App() {
             <Contact />
           </PrivateRoute>
 
-          <Route exact path="/destination/:ticketType">
-            <TicketType />
-          </Route>
+          <PrivateRoute exact path="/destination/:ticketType">
+            <Destination />
+          </PrivateRoute>
 
           <Route path="/login">
             <Login />

@@ -13,16 +13,12 @@ const center = {
   lng: 91.821831,
 };
 
-const onLoad = (marker) => {
-  console.log("marker: ", marker);
-};
-
 function Map() {
   return (
     <LoadScript googleMapsApiKey="AIzaSyBWbBoN_xHW6Sxd55srbgVA7JaGkMJ4csk">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        <Marker onLoad={onLoad} position={center}></Marker>
+        <Marker  position={center}></Marker>
       </GoogleMap>
     </LoadScript>
   );

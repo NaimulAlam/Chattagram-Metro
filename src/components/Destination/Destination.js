@@ -120,23 +120,23 @@ const Destination = () => {
                 </p>
                 <hr />
                 <p>
-                  <img src={fakeData[0]?.imgUrl} height="60px" alt="" />{" "}
+                  <img src={fakeData[1]?.imgUrl} height="60px" alt="" />{" "}
                   <span>
                     <FontAwesomeIcon icon={faHandPointRight} />
-                    {fakeData[0]?.name}
+                    {fakeData[1]?.name}
                   </span>{" "}
                   <FontAwesomeIcon icon={faUserFriends} />- 2 Price:
-                  {fakeData[0]?.price}$
+                  {fakeData[1]?.price}$
                 </p>
                 <hr />
                 <p>
-                  <img src={showData[0]?.imgUrl} height="60px" alt="" />{" "}
+                  <img src={fakeData[2]?.imgUrl} height="60px" alt="" />{" "}
                   <span>
                     <FontAwesomeIcon icon={faHandPointRight} />
-                    {showData[0]?.name}
+                    {fakeData[2]?.name}
                   </span>{" "}
                   <FontAwesomeIcon icon={faUserFriends} />- 4 Price:
-                  {fakeData[0]?.price}$
+                  {fakeData[2]?.price}$
                 </p>
               </div>
             )}
