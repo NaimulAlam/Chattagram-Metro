@@ -26,13 +26,11 @@ const Destination = () => {
     to: "",
     showData: "",
   });
-  console.log(place);
   const handleBlur = (e) => {
     let getInfo = true;
     if (getInfo) {
       const newPlace = { ...place };
       newPlace[e.target.name] = e.target.value;
-      console.log(newPlace);
       setPlace(newPlace);
     }
   };

@@ -10,13 +10,6 @@ const Header = () => {
     setLoggedInUser({});
   };
 
-  const userNameStyle = {
-      color: "rgb(255, 255, 255)",
-      fontSize: "15px",
-      backgroundColor: "rgb(3, 151, 10)",
-      borderRadius: "20px",
-  }
-
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Link to="/home">
