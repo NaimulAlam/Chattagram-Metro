@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import React, { useState } from "react";
 import "./Destination.css";
 import DateTimePicker from "react-datetime-picker";
+import Map from "./Map";
 
 const Destination = () => {
   const { ticketType } = useParams();
@@ -39,8 +40,8 @@ const Destination = () => {
               </Col>
             </Form>
           </Col>
-          <Col className="Map" sm={8}>
-            <Image src={mapImg} alt="Map" fluid />
+          <Col  xs={12} sm={8}>
+            <Map></Map>
           </Col>
         </Row>
       </Container>

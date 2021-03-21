@@ -4,3 +4,14 @@
 .locationCard{
     background-color: royalblue;
 }
+
+.Map{
+    width: 800px;
+    height: 400px;
+}
+@media screen and (max-width: 600px) {
+    .Map{
+        width: 400px;
+        height: 400px;
+    }
+  }
