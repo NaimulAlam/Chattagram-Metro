@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Chattagram Metro",
+  "name": "Chattagram Metro Rail Ticketing system",
   "icons": [
     {
       "src": "favicon.ico",
